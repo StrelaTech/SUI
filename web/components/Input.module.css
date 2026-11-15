@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--sui-space-sm);
+  min-height: 52px;
+  padding: var(--sui-space-sm) 14px;
+  border-radius: var(--sui-radius-lg);
+  background: var(--sui-color-surface-container);
+  color: var(--sui-color-on-surface-container);
+}
+
+.wrapper:focus-within {
+  box-shadow: 0 0 0 2px var(--sui-color-primary);
+}
+
+.icon {
+  display: inline-flex;
+  color: var(--sui-color-on-surface-container-variant);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--sui-font-size-body-1);
+  line-height: var(--sui-line-height-body-1);
+}
+
+.input::placeholder {
+  color: var(--sui-color-on-surface-container-variant);
+  opacity: 0.55;
+}

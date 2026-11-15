@@ -1,0 +1,15 @@
+.gradle/
+build/
+**/build/
+.kotlin/
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+
+npm-debug.log*

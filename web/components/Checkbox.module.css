@@ -1,0 +1,58 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sui-space-sm);
+  cursor: pointer;
+  font-size: var(--sui-font-size-body-2);
+  line-height: var(--sui-line-height-body-2);
+  color: var(--sui-color-on-surface-container);
+  user-select: none;
+}
+
+.input {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: var(--sui-radius-sm);
+  border: 1.5px solid var(--sui-color-on-surface-container-variant);
+  background: var(--sui-color-surface-container);
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.input:checked + .box {
+  background: var(--sui-color-primary);
+  border-color: var(--sui-color-primary);
+}
+
+.input:checked + .box::after {
+  content: "";
+  width: 10px;
+  height: 5px;
+  margin-top: -2px;
+  border-left: 2px solid var(--sui-color-on-primary);
+  border-bottom: 2px solid var(--sui-color-on-primary);
+  transform: rotate(-45deg);
+}
+
+.input:focus-visible + .box {
+  outline: 2px solid var(--sui-color-primary);
+  outline-offset: 2px;
+}
+
+.label {
+  padding-top: 1px;
+}
